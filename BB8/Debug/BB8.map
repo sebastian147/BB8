@@ -1,0 +1,473 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+                              ./src/Drivers/cr_startup_lpc175x_6x.o (__main)
+
+Discarded input sections
+
+ .group         0x00000000        0x8 ./src/Primitivas/PR_rgb.o
+ .group         0x00000000        0x8 ./src/Primitivas/PR_rgb.o
+ .group         0x00000000        0x8 ./src/Primitivas/PR_rgb.o
+ .group         0x00000000        0x8 ./src/Primitivas/PR_rgb.o
+ .group         0x00000000        0x8 ./src/Primitivas/PR_rgb.o
+ .text          0x00000000        0x0 ./src/Primitivas/PR_rgb.o
+ .data          0x00000000        0x0 ./src/Primitivas/PR_rgb.o
+ .bss           0x00000000        0x0 ./src/Primitivas/PR_rgb.o
+ .text.RGB      0x00000000        0xc ./src/Primitivas/PR_rgb.o
+ .debug_info    0x00000000       0x65 ./src/Primitivas/PR_rgb.o
+ .debug_abbrev  0x00000000       0x45 ./src/Primitivas/PR_rgb.o
+ .debug_aranges
+                0x00000000       0x20 ./src/Primitivas/PR_rgb.o
+ .debug_ranges  0x00000000       0x10 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000       0x53 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000      0x886 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000      0x693 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000       0x64 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000      0x142 ./src/Primitivas/PR_rgb.o
+ .debug_macro   0x00000000       0x16 ./src/Primitivas/PR_rgb.o
+ .debug_line    0x00000000      0x144 ./src/Primitivas/PR_rgb.o
+ .debug_str     0x00000000     0x3e1b ./src/Primitivas/PR_rgb.o
+ .comment       0x00000000       0x6f ./src/Primitivas/PR_rgb.o
+ .debug_frame   0x00000000       0x30 ./src/Primitivas/PR_rgb.o
+ .ARM.attributes
+                0x00000000       0x33 ./src/Primitivas/PR_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_GPIO.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_GPIO.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_GPIO.o
+ .text          0x00000000        0x0 ./src/Drivers/FW_GPIO.o
+ .data          0x00000000        0x0 ./src/Drivers/FW_GPIO.o
+ .bss           0x00000000        0x0 ./src/Drivers/FW_GPIO.o
+ .text.SetPINMODE
+                0x00000000       0x7c ./src/Drivers/FW_GPIO.o
+ .text.GetPIN   0x00000000       0x38 ./src/Drivers/FW_GPIO.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/FW_GPIO.o
+ .debug_macro   0x00000000      0x693 ./src/Drivers/FW_GPIO.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_KitInit.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_KitInit.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_KitInit.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_KitInit.o
+ .text          0x00000000        0x0 ./src/Drivers/FW_KitInit.o
+ .data          0x00000000        0x0 ./src/Drivers/FW_KitInit.o
+ .bss           0x00000000        0x0 ./src/Drivers/FW_KitInit.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/FW_KitInit.o
+ .debug_macro   0x00000000      0x693 ./src/Drivers/FW_KitInit.o
+ .debug_macro   0x00000000       0x64 ./src/Drivers/FW_KitInit.o
+ .debug_macro   0x00000000      0x142 ./src/Drivers/FW_KitInit.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/FW_rgb.o
+ .text          0x00000000        0x0 ./src/Drivers/FW_rgb.o
+ .data          0x00000000        0x0 ./src/Drivers/FW_rgb.o
+ .bss           0x00000000        0x0 ./src/Drivers/FW_rgb.o
+ .text.rgb      0x00000000       0x28 ./src/Drivers/FW_rgb.o
+ .text.Cambido_de_colores
+                0x00000000       0x98 ./src/Drivers/FW_rgb.o
+ .bss.color.3754
+                0x00000000        0x1 ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000000      0x693 ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000000       0x64 ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000000      0x142 ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000000       0x16 ./src/Drivers/FW_rgb.o
+ .group         0x00000000        0x8 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .text          0x00000000        0x0 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .data          0x00000000        0x0 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .bss           0x00000000        0x0 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .group         0x00000000        0x8 ./src/Drivers/crp.o
+ .group         0x00000000        0x8 ./src/Drivers/crp.o
+ .text          0x00000000        0x0 ./src/Drivers/crp.o
+ .data          0x00000000        0x0 ./src/Drivers/crp.o
+ .bss           0x00000000        0x0 ./src/Drivers/crp.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/crp.o
+ .group         0x00000000        0x8 ./src/Drivers/systick.o
+ .group         0x00000000        0x8 ./src/Drivers/systick.o
+ .group         0x00000000        0x8 ./src/Drivers/systick.o
+ .group         0x00000000        0x8 ./src/Drivers/systick.o
+ .group         0x00000000        0x8 ./src/Drivers/systick.o
+ .text          0x00000000        0x0 ./src/Drivers/systick.o
+ .data          0x00000000        0x0 ./src/Drivers/systick.o
+ .bss           0x00000000        0x0 ./src/Drivers/systick.o
+ .debug_macro   0x00000000      0x886 ./src/Drivers/systick.o
+ .debug_macro   0x00000000      0x693 ./src/Drivers/systick.o
+ .debug_macro   0x00000000       0x64 ./src/Drivers/systick.o
+ .debug_macro   0x00000000      0x142 ./src/Drivers/systick.o
+ .debug_macro   0x00000000       0x16 ./src/Drivers/systick.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .group         0x00000000        0x8 ./src/Aplicacion/BB8.o
+ .text          0x00000000        0x0 ./src/Aplicacion/BB8.o
+ .data          0x00000000        0x0 ./src/Aplicacion/BB8.o
+ .bss           0x00000000        0x0 ./src/Aplicacion/BB8.o
+ .debug_macro   0x00000000      0x886 ./src/Aplicacion/BB8.o
+ .debug_macro   0x00000000      0x693 ./src/Aplicacion/BB8.o
+ .debug_macro   0x00000000       0x64 ./src/Aplicacion/BB8.o
+ .debug_macro   0x00000000      0x142 ./src/Aplicacion/BB8.o
+ .debug_macro   0x00000000       0x16 ./src/Aplicacion/BB8.o
+ .text          0x00000000        0x0 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+ .data          0x00000000        0x0 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+ .bss           0x00000000        0x0 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlash512        0x00000000         0x00080000         xr
+RamLoc32         0x10000000         0x00008000         xrw
+RamAHB32         0x2007c000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./src/Primitivas/PR_rgb.o
+LOAD ./src/Drivers/FW_GPIO.o
+LOAD ./src/Drivers/FW_KitInit.o
+LOAD ./src/Drivers/FW_rgb.o
+LOAD ./src/Drivers/cr_startup_lpc175x_6x.o
+LOAD ./src/Drivers/crp.o
+LOAD ./src/Drivers/systick.o
+LOAD ./src/Aplicacion/BB8.o
+START GROUP
+LOAD /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a
+LOAD /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/libcr_eabihelpers.a
+END GROUP
+                0x00000000                __base_MFlash512 = 0x0
+                0x00000000                __base_Flash = 0x0
+                0x00080000                __top_MFlash512 = 0x80000
+                0x00080000                __top_Flash = 0x80000
+                0x10000000                __base_RamLoc32 = 0x10000000
+                0x10000000                __base_RAM = 0x10000000
+                0x10008000                __top_RamLoc32 = 0x10008000
+                0x10008000                __top_RAM = 0x10008000
+                0x2007c000                __base_RamAHB32 = 0x2007c000
+                0x2007c000                __base_RAM2 = 0x2007c000
+                0x20084000                __top_RamAHB32 = 0x20084000
+                0x20084000                __top_RAM2 = 0x20084000
+
+.text           0x00000000      0x874
+ FILL mask 0xff
+                0x00000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xcc ./src/Drivers/cr_startup_lpc175x_6x.o
+                0x00000000                g_pfnVectors
+                0x000000cc                . = ALIGN (0x4)
+                0x000000cc                __section_table_start = .
+                0x000000cc                __data_section_table = .
+                0x000000cc        0x4 LONG 0x874 LOADADDR (.data)
+                0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
+                0x000000d8        0x4 LONG 0x874 LOADADDR (.data_RAM2)
+                0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
+                0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000e4                __data_section_table_end = .
+                0x000000e4                __bss_section_table = .
+                0x000000e4        0x4 LONG 0x10000008 ADDR (.bss)
+                0x000000e8        0x4 LONG 0x0 SIZEOF (.bss)
+                0x000000ec        0x4 LONG 0x2007c000 ADDR (.bss_RAM2)
+                0x000000f0        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000f4                __bss_section_table_end = .
+                0x000000f4                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000f4      0x140 ./src/Drivers/cr_startup_lpc175x_6x.o
+                0x000000f4                data_init
+                0x00000138                bss_init
+                0x00000170                ResetISR
+                0x000001e4                NMI_Handler
+                0x000001ec                HardFault_Handler
+                0x000001f4                MemManage_Handler
+                0x000001fc                BusFault_Handler
+                0x00000204                UsageFault_Handler
+                0x0000020c                SVC_Handler
+                0x00000214                DebugMon_Handler
+                0x0000021c                PendSV_Handler
+                0x0000022c                TIMER2_IRQHandler
+                0x0000022c                RIT_IRQHandler
+                0x0000022c                I2C0_IRQHandler
+                0x0000022c                USBActivity_IRQHandler
+                0x0000022c                PWM1_IRQHandler
+                0x0000022c                I2C1_IRQHandler
+                0x0000022c                EINT2_IRQHandler
+                0x0000022c                UART1_IRQHandler
+                0x0000022c                EINT3_IRQHandler
+                0x0000022c                CANActivity_IRQHandler
+                0x0000022c                TIMER3_IRQHandler
+                0x0000022c                UART0_IRQHandler
+                0x0000022c                IntDefaultHandler
+                0x0000022c                PLL0_IRQHandler
+                0x0000022c                CAN_IRQHandler
+                0x0000022c                PLL1_IRQHandler
+                0x0000022c                SSP0_IRQHandler
+                0x0000022c                I2S_IRQHandler
+                0x0000022c                I2C2_IRQHandler
+                0x0000022c                RTC_IRQHandler
+                0x0000022c                TIMER0_IRQHandler
+                0x0000022c                SPI_IRQHandler
+                0x0000022c                EINT1_IRQHandler
+                0x0000022c                TIMER1_IRQHandler
+                0x0000022c                UART2_IRQHandler
+                0x0000022c                ADC_IRQHandler
+                0x0000022c                SSP1_IRQHandler
+                0x0000022c                USB_IRQHandler
+                0x0000022c                BOD_IRQHandler
+                0x0000022c                WDT_IRQHandler
+                0x0000022c                QEI_IRQHandler
+                0x0000022c                EINT0_IRQHandler
+                0x0000022c                DMA_IRQHandler
+                0x0000022c                UART3_IRQHandler
+                0x0000022c                MCPWM_IRQHandler
+                0x0000022c                ENET_IRQHandler
+                0x000002fc                . = 0x2fc
+ *fill*         0x00000234       0xc8 ff
+                0x000002fc                PROVIDE (__CRP_WORD_START__, .)
+ *(.crp)
+ .crp           0x000002fc        0x4 ./src/Drivers/crp.o
+                0x000002fc                CRP_WORD
+                0x00000300                PROVIDE (__CRP_WORD_END__, .)
+                0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
+ *(.text*)
+ .text.SetPINSEL
+                0x00000300       0x88 ./src/Drivers/FW_GPIO.o
+                0x00000300                SetPINSEL
+ .text.SetDIR   0x00000388       0x74 ./src/Drivers/FW_GPIO.o
+                0x00000388                SetDIR
+ .text.SetPIN   0x000003fc       0x70 ./src/Drivers/FW_GPIO.o
+                0x000003fc                SetPIN
+ .text.Kit_Init
+                0x0000046c       0x14 ./src/Drivers/FW_KitInit.o
+                0x0000046c                Kit_Init
+ .text.PLL_Init
+                0x00000480      0x14c ./src/Drivers/FW_KitInit.o
+                0x00000480                PLL_Init
+ .text.Kit_BaseInit
+                0x000005cc      0x168 ./src/Drivers/FW_KitInit.o
+                0x000005cc                Kit_BaseInit
+ .text.rgb_init
+                0x00000734       0x64 ./src/Drivers/FW_rgb.o
+                0x00000734                rgb_init
+ .text.InicSysTick
+                0x00000798       0x40 ./src/Drivers/systick.o
+                0x00000798                InicSysTick
+ .text.SysTick_Handler
+                0x000007d8       0x74 ./src/Drivers/systick.o
+                0x000007d8                SysTick_Handler
+ .text.main     0x0000084c       0x24 ./src/Aplicacion/BB8.o
+                0x0000084c                main
+ .text.__weak_main
+                0x00000870        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+                0x00000870                __main
+                0x00000870                __weak_main
+ *(.rodata .rodata.* .constdata .constdata.*)
+                0x00000874                . = ALIGN (0x4)
+
+.glue_7         0x00000874        0x0
+ .glue_7        0x00000874        0x0 linker stubs
+
+.glue_7t        0x00000874        0x0
+ .glue_7t       0x00000874        0x0 linker stubs
+
+.vfp11_veneer   0x00000874        0x0
+ .vfp11_veneer  0x00000874        0x0 linker stubs
+
+.v4_bx          0x00000874        0x0
+ .v4_bx         0x00000874        0x0 linker stubs
+
+.iplt           0x00000874        0x0
+ .iplt          0x00000874        0x0 ./src/Primitivas/PR_rgb.o
+
+.rel.dyn        0x00000874        0x0
+ .rel.iplt      0x00000874        0x0 ./src/Primitivas/PR_rgb.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000874                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000874                __exidx_end = .
+                0x00000874                _etext = .
+
+.data_RAM2      0x2007c000        0x0 load address 0x00000874
+ FILL mask 0xff
+                [!provide]                PROVIDE (__start_data_RAM2, .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamAHB32)
+ *(.data.$RAM2*)
+ *(.data.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__end_data_RAM2, .)
+
+.uninit_RESERVED
+                0x10000000        0x0
+ *(.bss.$RESERVED*)
+                0x10000000                . = ALIGN (0x4)
+                0x10000000                _end_uninit_RESERVED = .
+
+.data           0x10000000        0x8 load address 0x00000874
+ FILL mask 0xff
+                0x10000000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+ .data.msTicks.3745
+                0x10000000        0x4 ./src/Drivers/systick.o
+ .data.flag.3746
+                0x10000004        0x1 ./src/Drivers/systick.o
+                0x10000008                . = ALIGN (0x4)
+ *fill*         0x10000005        0x3 ff
+                0x10000008                _edata = .
+
+.igot.plt       0x10000008        0x0 load address 0x0000087c
+ .igot.plt      0x10000008        0x0 ./src/Primitivas/PR_rgb.o
+
+.bss_RAM2       0x2007c000        0x0
+                [!provide]                PROVIDE (__start_bss_RAM2, .)
+ *(.bss.$RAM2*)
+ *(.bss.$RamAHB32*)
+                0x2007c000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                PROVIDE (__end_bss_RAM2, .)
+
+.bss            0x10000008        0x0
+                0x10000008                _bss = .
+ *(.bss*)
+ *(COMMON)
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _ebss = .
+                [!provide]                PROVIDE (end, .)
+
+.noinit_RAM2    0x2007c000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamAHB32*)
+                0x2007c000                . = ALIGN (0x4)
+
+.noinit         0x10000008        0x0
+                0x10000008                _noinit = .
+ *(.noinit*)
+                0x10000008                . = ALIGN (0x4)
+                0x10000008                _end_noinit = .
+                [!provide]                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
+                0xefff74c6                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+OUTPUT(BB8.axf elf32-littlearm)
+
+.debug_info     0x00000000      0x76e
+ .debug_info    0x00000000      0x19c ./src/Drivers/FW_GPIO.o
+ .debug_info    0x0000019c       0x92 ./src/Drivers/FW_KitInit.o
+ .debug_info    0x0000022e       0xa4 ./src/Drivers/FW_rgb.o
+ .debug_info    0x000002d2      0x253 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_info    0x00000525       0x3f ./src/Drivers/crp.o
+ .debug_info    0x00000564      0x187 ./src/Drivers/systick.o
+ .debug_info    0x000006eb       0x83 ./src/Aplicacion/BB8.o
+
+.debug_abbrev   0x00000000      0x3f0
+ .debug_abbrev  0x00000000       0x8c ./src/Drivers/FW_GPIO.o
+ .debug_abbrev  0x0000008c       0x6a ./src/Drivers/FW_KitInit.o
+ .debug_abbrev  0x000000f6       0x91 ./src/Drivers/FW_rgb.o
+ .debug_abbrev  0x00000187       0xf5 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_abbrev  0x0000027c       0x36 ./src/Drivers/crp.o
+ .debug_abbrev  0x000002b2       0xdb ./src/Drivers/systick.o
+ .debug_abbrev  0x0000038d       0x63 ./src/Aplicacion/BB8.o
+
+.debug_aranges  0x00000000      0x180
+ .debug_aranges
+                0x00000000       0x40 ./src/Drivers/FW_GPIO.o
+ .debug_aranges
+                0x00000040       0x30 ./src/Drivers/FW_KitInit.o
+ .debug_aranges
+                0x00000070       0x30 ./src/Drivers/FW_rgb.o
+ .debug_aranges
+                0x000000a0       0x80 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_aranges
+                0x00000120       0x18 ./src/Drivers/crp.o
+ .debug_aranges
+                0x00000138       0x28 ./src/Drivers/systick.o
+ .debug_aranges
+                0x00000160       0x20 ./src/Aplicacion/BB8.o
+
+.debug_ranges   0x00000000      0x108
+ .debug_ranges  0x00000000       0x30 ./src/Drivers/FW_GPIO.o
+ .debug_ranges  0x00000030       0x20 ./src/Drivers/FW_KitInit.o
+ .debug_ranges  0x00000050       0x20 ./src/Drivers/FW_rgb.o
+ .debug_ranges  0x00000070       0x70 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_ranges  0x000000e0       0x18 ./src/Drivers/systick.o
+ .debug_ranges  0x000000f8       0x10 ./src/Aplicacion/BB8.o
+
+.debug_macro    0x00000000      0x2bf
+ .debug_macro   0x00000000       0x29 ./src/Drivers/FW_GPIO.o
+ .debug_macro   0x00000029       0x5e ./src/Drivers/FW_GPIO.o
+ .debug_macro   0x00000087       0x40 ./src/Drivers/FW_KitInit.o
+ .debug_macro   0x000000c7       0x5c ./src/Drivers/FW_rgb.o
+ .debug_macro   0x00000123       0x1d ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_macro   0x00000140       0x1a ./src/Drivers/crp.o
+ .debug_macro   0x0000015a       0x34 ./src/Drivers/crp.o
+ .debug_macro   0x0000018e       0x53 ./src/Drivers/systick.o
+ .debug_macro   0x000001e1       0x5c ./src/Aplicacion/BB8.o
+ .debug_macro   0x0000023d       0x82 ./src/Aplicacion/BB8.o
+
+.debug_line     0x00000000      0x87f
+ .debug_line    0x00000000      0x125 ./src/Drivers/FW_GPIO.o
+ .debug_line    0x00000125      0x16a ./src/Drivers/FW_KitInit.o
+ .debug_line    0x0000028f      0x182 ./src/Drivers/FW_rgb.o
+ .debug_line    0x00000411       0xdc ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_line    0x000004ed       0x84 ./src/Drivers/crp.o
+ .debug_line    0x00000571      0x169 ./src/Drivers/systick.o
+ .debug_line    0x000006da      0x1a5 ./src/Aplicacion/BB8.o
+
+.debug_str      0x00000000     0x462e
+ .debug_str     0x00000000     0x3a55 ./src/Drivers/FW_GPIO.o
+                               0x3a92 (size before relaxing)
+ .debug_str     0x00003a55      0x3e0 ./src/Drivers/FW_KitInit.o
+                               0x3e17 (size before relaxing)
+ .debug_str     0x00003e35       0x67 ./src/Drivers/FW_rgb.o
+                               0x3e42 (size before relaxing)
+ .debug_str     0x00003e9c      0x1d3 ./src/Drivers/cr_startup_lpc175x_6x.o
+                               0x26a0 (size before relaxing)
+ .debug_str     0x0000406f       0xf1 ./src/Drivers/crp.o
+                               0x25b8 (size before relaxing)
+ .debug_str     0x00004160       0x61 ./src/Drivers/systick.o
+                               0x3ecc (size before relaxing)
+ .debug_str     0x000041c1      0x46d ./src/Aplicacion/BB8.o
+                               0x4275 (size before relaxing)
+
+.comment        0x00000000       0xdc
+ .comment       0x00000000       0x6e ./src/Drivers/FW_GPIO.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f ./src/Drivers/FW_KitInit.o
+ .comment       0x0000006e       0x6f ./src/Drivers/FW_rgb.o
+ .comment       0x0000006e       0x6f ./src/Drivers/cr_startup_lpc175x_6x.o
+ .comment       0x0000006e       0x6f ./src/Drivers/crp.o
+ .comment       0x0000006e       0x6f ./src/Drivers/systick.o
+ .comment       0x0000006e       0x6f ./src/Aplicacion/BB8.o
+ .comment       0x0000006e       0x6e /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+                                 0x6f (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 ./src/Drivers/FW_GPIO.o
+ .ARM.attributes
+                0x00000033       0x33 ./src/Drivers/FW_KitInit.o
+ .ARM.attributes
+                0x00000066       0x33 ./src/Drivers/FW_rgb.o
+ .ARM.attributes
+                0x00000099       0x33 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .ARM.attributes
+                0x000000cc       0x33 ./src/Drivers/crp.o
+ .ARM.attributes
+                0x000000ff       0x33 ./src/Drivers/systick.o
+ .ARM.attributes
+                0x00000132       0x33 ./src/Aplicacion/BB8.o
+ .ARM.attributes
+                0x00000165       0x33 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+
+.debug_frame    0x00000000      0x39c
+ .debug_frame   0x00000000       0xd8 ./src/Drivers/FW_GPIO.o
+ .debug_frame   0x000000d8       0x68 ./src/Drivers/FW_KitInit.o
+ .debug_frame   0x00000140       0x64 ./src/Drivers/FW_rgb.o
+ .debug_frame   0x000001a4      0x170 ./src/Drivers/cr_startup_lpc175x_6x.o
+ .debug_frame   0x00000314       0x54 ./src/Drivers/systick.o
+ .debug_frame   0x00000368       0x34 ./src/Aplicacion/BB8.o

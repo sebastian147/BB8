@@ -1,0 +1,15 @@
+#include "aplicacion.h"
+#include "FW_rgb"
+
+void rgb_init (void)
+{
+	//elijo que funcion van a cumplir los pines 0=gpio
+	SetPINSEL(LEDR,0);
+	SetPINSEL(LEDV,0);
+	SetPINSEL(LEDA,0);
+
+	SetDIR(LEDR,0);
+	SetDIR(LEDV,0);
+	SetDIR(LEDA,0);
+
+}

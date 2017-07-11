@@ -1,0 +1,29 @@
+/*
+===============================================================================
+ Name        : BB8.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+
+#incldue "aplicacion.h"
+
+int main(void) {
+
+	salida=0;
+
+
+	while(salida) {
+		RGB();
+	}
+    return 0 ;
+}

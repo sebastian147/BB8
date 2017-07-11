@@ -1,0 +1,51 @@
+#include "aplicacion.h"
+
+void InicSysTick(void){ //si divido x 4, interrumpe cada 2,5ms
+		STRELOAD  = ( STCALIB / 4 ) - 1 ;   //N=1 para 10ms
+		STCURR = 0;
+
+		ENABLE = 1;
+		TICKINT = 1;
+		CLKSOURCE = 1;
+		return;
+}
+
+void SysTick_Handler(void)
+{
+	static uint32_t msTicks=1000;
+	static uint32_t cambioR=1000;
+	static uint8_t flag=1;
+
+	if(msTicks)
+	{
+		msTicks--;
+
+		if(!msTicks)
+		{
+			msTicks = cambioR;
+			Cambido_de_colores();
+			if(!flag)
+			{
+				cambioR+=100;
+
+				if(cambioR>=1000)
+				{
+					flag=1;
+				}
+
+			}
+			else if(flag)
+			{
+				cambioR-=100;
+
+				if(cambioR<=0)
+				{
+					flag=0;
+				}
+
+			}
+
+		}
+	}
+
+}

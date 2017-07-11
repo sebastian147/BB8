@@ -1,0 +1,6 @@
+#define LEDR 0,22
+
+
+
+void rgb_init (void);
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.crt.lpcxpresso.feature:8.2.0.201607221326"/>
+		<item value="org.eclipse.cdt.debug.gdbjtag:8.8.1.201602051005"/>
+		<item value="org.eclipse.cdt.gdb:8.8.1.201602051005"/>
+		<item value="org.eclipse.cdt:8.8.1.201602051005"/>
+		<item value="org.eclipse.cvs:1.4.201.v20160212-1500"/>
+		<item value="org.eclipse.draw2d:3.10.1.201508170204"/>
+		<item value="org.eclipse.emf.common:2.11.1.v20160208-0816"/>
+		<item value="org.eclipse.emf.ecore:2.11.2.v20160208-0816"/>
+		<item value="org.eclipse.gef:3.10.1.201508170204"/>
+		<item value="org.eclipse.help:2.1.2.v20160212-1500"/>
+		<item value="org.eclipse.platform:4.5.2.v20160212-1500"/>
+		<item value="org.eclipse.rcp:4.5.2.v20160212-1500"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/seba/Documentos/utn/info 2/Trabajo_practico_Final"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.crt.quickstart.new.CProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.cdt.ui.newCWizards"/>
+		</list>
+	</section>
+</section>

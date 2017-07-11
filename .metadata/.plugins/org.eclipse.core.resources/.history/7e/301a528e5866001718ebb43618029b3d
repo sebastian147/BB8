@@ -1,0 +1,7 @@
+#define LEDR 0,22	//rojo
+#define LEDV 3,25	//verde
+#define LEDB 3,26	//azul
+
+
+void rgb_init (void);
+

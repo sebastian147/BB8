@@ -1,0 +1,6 @@
+#include "aplicacion.h"
+
+void rgb_init (void)
+{
+	setpinsel()
+}
