@@ -12,32 +12,82 @@ void InicSysTick(void){ //si divido x 4, interrumpe cada 2,5ms
 
 void SysTick_Handler(void)
 {
-	static uint32_t msTicks=100;
-	static uint8_t flag=1;
-	uint8_t bufferled=100;
 
-	if(msTicks)
+	static uint32_t msTicksr=50;
+	static uint8_t flagr=1;
+	static uint8_t bufferledr=50;
+
+
+	if(flagr==1 && msTicksr==bufferledr)
 	{
-		msTicks--;
+		SetPIN(LEDR,0);
+		flagr=0;
+	}
+	else
+	{
+		SetPIN(LEDR,1);
+		flagr=1;
+	}
 
-		if(!msTicks)
+	if(msTicksr)
+	{
+		msTicksr--;
+		if(!msTicksr)
 		{
-			if(flag)
+			msTicksr=50;
+			bufferledr--;
+			if(bufferledr==0)
 			{
-				flag=0;
-				msTicks=100;
+				bufferledr=50;
+			}
+		}
+	}
+	/*	static uint32_t msTicksr=100;
+	static uint8_t flagr1=1;
+	static uint8_t flagr2=1;
+	static uint8_t bufferledr=100;
+
+	if(msTicksr)
+	{
+		msTicksr--;
+		if(!msTicksr)
+		{
+			msTicksr=bufferledr;
+
+			SetPIN(LEDR,0);
+
+			if(flagr1==1)
+				bufferledr--;
+			else
+				bufferledr++;
+
+			if(bufferledr == 1)
+			{
+				flagr1=0;
+			}
+			if(bufferledr==100)
+			{
+				flagr1=1;
+			}
+
+
+
+		}
+		else
+		{
+			if(flagr2==1)
+			{
+				SetPIN(LEDR,1);
+				flagr2=0;
 			}
 			else
 			{
-				flag=1;
-				if(bufferled)
-					SetPIN(LEDR,0);
-				else
-					SetPIN(LEDR,1);
-				msTicks=bufferled;
+				SetPIN(LEDR,0);
+				flagr2=1;
 			}
-
 		}
 	}
+*/
+
 
 }

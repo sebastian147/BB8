@@ -1,0 +1,144 @@
+#include "aplicacion.h"
+
+void InicSysTick(void){ //si divido x 4, interrumpe cada 2,5ms
+		STRELOAD  = ( STCALIB / 4 ) - 1 ;   //N=1 para 10ms
+		STCURR = 0;
+
+		ENABLE = 1;
+		TICKINT = 1;
+		CLKSOURCE = 1;
+		return;
+}
+
+void SysTick_Handler(void)
+{
+	static uint32_t msTicksr=1000;
+	static uint8_t flagr1=1;
+	static uint8_t flagr2=1;
+	static uint8_t bufferledr=1000;
+
+	static uint32_t msTicksv=1;
+	static uint8_t flagv1=2;
+	static uint8_t flagv2=1;
+	static uint8_t bufferledv=1;
+
+	if(msTicksr)
+	{
+		msTicksr--;
+		if(!msTicksr)
+		{
+
+
+			if(flagr1==1)
+				bufferledr--;
+			else
+				bufferledr++;
+
+			if(bufferledr <= 1)
+			{
+				flagr1=0;
+			}
+			if(bufferledr==1000)
+			{
+				flagr1=1;
+			}
+
+			msTicksr=bufferledr;
+
+			if(flagr2==1)
+			{
+				SetPIN(LEDR,1);
+				flagr2=0;
+
+			}
+			else
+			{
+				SetPIN(LEDR,0);
+				flagr2=1;
+			}
+
+		}
+
+
+	}
+	if(msTicksv)
+	{
+		msTicksv--;
+		if(!msTicksv)
+		{
+
+
+			if(flagv1==1)
+				bufferledv--;
+			else
+				bufferledv++;
+
+			if(bufferledv <= 1)
+			{
+				flagv1=0;
+			}
+			if(bufferledv==1000)
+			{
+				flagv1=1;
+			}
+
+			msTicksv=bufferledv;
+
+			if(flagv2==1)
+			{
+				SetPIN(LEDV,1);
+				flagv2=0;
+
+			}
+			else
+			{
+				SetPIN(LEDV,0);
+				flagv2=1;
+			}
+
+		}
+
+
+	}
+/*	static uint32_t msTicksr=100;
+	static uint8_t flagr=1;
+	static uint8_t bufferledr=100;
+
+	static uint32_t msTicksv=100;
+	static uint8_t flagv=1;
+	static uint8_t bufferledv=0;
+
+	if(msTicksr)
+	{
+		msTicksr--;
+		if(!msTicksr)
+		{
+			msTicksr=bufferledr;
+
+			SetPIN(LEDR,0);
+
+			if(flagr==1)
+				bufferledr--;
+			else
+				bufferledr++;
+
+			if(bufferledr == 1)
+			{
+				flagr=0;
+			}
+			if(bufferledr==100)
+			{
+				flagr=1;
+			}
+
+
+
+		}
+		else
+		{
+			SetPIN(LEDR,1);
+		}
+	}
+
+*/
+}

@@ -148,7 +148,7 @@ END GROUP
                 0x20084000                __top_RamAHB32 = 0x20084000
                 0x20084000                __top_RAM2 = 0x20084000
 
-.text           0x00000000      0x874
+.text           0x00000000      0x888
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -157,10 +157,10 @@ END GROUP
                 0x000000cc                . = ALIGN (0x4)
                 0x000000cc                __section_table_start = .
                 0x000000cc                __data_section_table = .
-                0x000000cc        0x4 LONG 0x874 LOADADDR (.data)
+                0x000000cc        0x4 LONG 0x888 LOADADDR (.data)
                 0x000000d0        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000d4        0x4 LONG 0x8 SIZEOF (.data)
-                0x000000d8        0x4 LONG 0x874 LOADADDR (.data_RAM2)
+                0x000000d8        0x4 LONG 0x888 LOADADDR (.data_RAM2)
                 0x000000dc        0x4 LONG 0x2007c000 ADDR (.data_RAM2)
                 0x000000e0        0x4 LONG 0x0 SIZEOF (.data_RAM2)
                 0x000000e4                __data_section_table_end = .
@@ -253,45 +253,45 @@ END GROUP
                 0x00000798       0x40 ./src/Drivers/systick.o
                 0x00000798                InicSysTick
  .text.SysTick_Handler
-                0x000007d8       0x74 ./src/Drivers/systick.o
+                0x000007d8       0x88 ./src/Drivers/systick.o
                 0x000007d8                SysTick_Handler
- .text.main     0x0000084c       0x24 ./src/Aplicacion/BB8.o
-                0x0000084c                main
+ .text.main     0x00000860       0x24 ./src/Aplicacion/BB8.o
+                0x00000860                main
  .text.__weak_main
-                0x00000870        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
-                0x00000870                __main
-                0x00000870                __weak_main
+                0x00000884        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
+                0x00000884                __main
+                0x00000884                __weak_main
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x00000874                . = ALIGN (0x4)
+                0x00000888                . = ALIGN (0x4)
 
-.glue_7         0x00000874        0x0
- .glue_7        0x00000874        0x0 linker stubs
+.glue_7         0x00000888        0x0
+ .glue_7        0x00000888        0x0 linker stubs
 
-.glue_7t        0x00000874        0x0
- .glue_7t       0x00000874        0x0 linker stubs
+.glue_7t        0x00000888        0x0
+ .glue_7t       0x00000888        0x0 linker stubs
 
-.vfp11_veneer   0x00000874        0x0
- .vfp11_veneer  0x00000874        0x0 linker stubs
+.vfp11_veneer   0x00000888        0x0
+ .vfp11_veneer  0x00000888        0x0 linker stubs
 
-.v4_bx          0x00000874        0x0
- .v4_bx         0x00000874        0x0 linker stubs
+.v4_bx          0x00000888        0x0
+ .v4_bx         0x00000888        0x0 linker stubs
 
-.iplt           0x00000874        0x0
- .iplt          0x00000874        0x0 ./src/Primitivas/PR_rgb.o
+.iplt           0x00000888        0x0
+ .iplt          0x00000888        0x0 ./src/Primitivas/PR_rgb.o
 
-.rel.dyn        0x00000874        0x0
- .rel.iplt      0x00000874        0x0 ./src/Primitivas/PR_rgb.o
+.rel.dyn        0x00000888        0x0
+ .rel.iplt      0x00000888        0x0 ./src/Primitivas/PR_rgb.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000874                __exidx_start = .
+                0x00000888                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000874                __exidx_end = .
-                0x00000874                _etext = .
+                0x00000888                __exidx_end = .
+                0x00000888                _etext = .
 
-.data_RAM2      0x2007c000        0x0 load address 0x00000874
+.data_RAM2      0x2007c000        0x0 load address 0x00000888
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -307,21 +307,23 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x8 load address 0x00000874
+.data           0x10000000        0x8 load address 0x00000888
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
  *(.ramfunc*)
  *(.data*)
- .data.msTicks.3745
-                0x10000000        0x4 ./src/Drivers/systick.o
- .data.flag.3746
-                0x10000004        0x1 ./src/Drivers/systick.o
+ .data.flagr.3746
+                0x10000000        0x1 ./src/Drivers/systick.o
+ .data.bufferledr.3747
+                0x10000001        0x1 ./src/Drivers/systick.o
+ *fill*         0x10000002        0x2 ff
+ .data.msTicksr.3745
+                0x10000004        0x4 ./src/Drivers/systick.o
                 0x10000008                . = ALIGN (0x4)
- *fill*         0x10000005        0x3 ff
                 0x10000008                _edata = .
 
-.igot.plt       0x10000008        0x0 load address 0x0000087c
+.igot.plt       0x10000008        0x0 load address 0x00000890
  .igot.plt      0x10000008        0x0 ./src/Primitivas/PR_rgb.o
 
 .bss_RAM2       0x2007c000        0x0
@@ -354,14 +356,14 @@ END GROUP
                 0xefff74c6                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(BB8.axf elf32-littlearm)
 
-.debug_info     0x00000000      0x76e
+.debug_info     0x00000000      0x771
  .debug_info    0x00000000      0x19c ./src/Drivers/FW_GPIO.o
  .debug_info    0x0000019c       0x92 ./src/Drivers/FW_KitInit.o
  .debug_info    0x0000022e       0xa4 ./src/Drivers/FW_rgb.o
  .debug_info    0x000002d2      0x253 ./src/Drivers/cr_startup_lpc175x_6x.o
  .debug_info    0x00000525       0x3f ./src/Drivers/crp.o
- .debug_info    0x00000564      0x187 ./src/Drivers/systick.o
- .debug_info    0x000006eb       0x83 ./src/Aplicacion/BB8.o
+ .debug_info    0x00000564      0x18a ./src/Drivers/systick.o
+ .debug_info    0x000006ee       0x83 ./src/Aplicacion/BB8.o
 
 .debug_abbrev   0x00000000      0x3f0
  .debug_abbrev  0x00000000       0x8c ./src/Drivers/FW_GPIO.o
@@ -408,16 +410,16 @@ OUTPUT(BB8.axf elf32-littlearm)
  .debug_macro   0x000001e1       0x5c ./src/Aplicacion/BB8.o
  .debug_macro   0x0000023d       0x82 ./src/Aplicacion/BB8.o
 
-.debug_line     0x00000000      0x87f
+.debug_line     0x00000000      0x883
  .debug_line    0x00000000      0x125 ./src/Drivers/FW_GPIO.o
  .debug_line    0x00000125      0x16a ./src/Drivers/FW_KitInit.o
  .debug_line    0x0000028f      0x182 ./src/Drivers/FW_rgb.o
  .debug_line    0x00000411       0xdc ./src/Drivers/cr_startup_lpc175x_6x.o
  .debug_line    0x000004ed       0x84 ./src/Drivers/crp.o
- .debug_line    0x00000571      0x169 ./src/Drivers/systick.o
- .debug_line    0x000006da      0x1a5 ./src/Aplicacion/BB8.o
+ .debug_line    0x00000571      0x16d ./src/Drivers/systick.o
+ .debug_line    0x000006de      0x1a5 ./src/Aplicacion/BB8.o
 
-.debug_str      0x00000000     0x462e
+.debug_str      0x00000000     0x4631
  .debug_str     0x00000000     0x3a55 ./src/Drivers/FW_GPIO.o
                                0x3a92 (size before relaxing)
  .debug_str     0x00003a55      0x3e0 ./src/Drivers/FW_KitInit.o
@@ -428,9 +430,9 @@ OUTPUT(BB8.axf elf32-littlearm)
                                0x26a0 (size before relaxing)
  .debug_str     0x0000406f       0xf1 ./src/Drivers/crp.o
                                0x25b8 (size before relaxing)
- .debug_str     0x00004160       0x61 ./src/Drivers/systick.o
-                               0x3ecc (size before relaxing)
- .debug_str     0x000041c1      0x46d ./src/Aplicacion/BB8.o
+ .debug_str     0x00004160       0x64 ./src/Drivers/systick.o
+                               0x3ecf (size before relaxing)
+ .debug_str     0x000041c4      0x46d ./src/Aplicacion/BB8.o
                                0x4275 (size before relaxing)
 
 .comment        0x00000000       0xdc
@@ -464,10 +466,10 @@ OUTPUT(BB8.axf elf32-littlearm)
  .ARM.attributes
                 0x00000165       0x33 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(__weak__main.o)
 
-.debug_frame    0x00000000      0x39c
+.debug_frame    0x00000000      0x394
  .debug_frame   0x00000000       0xd8 ./src/Drivers/FW_GPIO.o
  .debug_frame   0x000000d8       0x68 ./src/Drivers/FW_KitInit.o
  .debug_frame   0x00000140       0x64 ./src/Drivers/FW_rgb.o
  .debug_frame   0x000001a4      0x170 ./src/Drivers/cr_startup_lpc175x_6x.o
- .debug_frame   0x00000314       0x54 ./src/Drivers/systick.o
- .debug_frame   0x00000368       0x34 ./src/Aplicacion/BB8.o
+ .debug_frame   0x00000314       0x4c ./src/Drivers/systick.o
+ .debug_frame   0x00000360       0x34 ./src/Aplicacion/BB8.o

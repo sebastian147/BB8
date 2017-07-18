@@ -1,4 +1,4 @@
-15:20:56 **** Incremental Build of configuration Debug for project BB8 ****
+17:32:54 **** Incremental Build of configuration Debug for project BB8 ****
 make -r all 
 Building file: ../src/Drivers/systick.c
 Invoking: MCU C Compiler
@@ -9,7 +9,7 @@ Building target: BB8.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker -Map="BB8.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m3 -mthumb -T "BB8_Debug.ld" -o "BB8.axf"  ./src/Primitivas/PR_rgb.o  ./src/Drivers/FW_GPIO.o ./src/Drivers/FW_KitInit.o ./src/Drivers/FW_rgb.o ./src/Drivers/cr_startup_lpc175x_6x.o ./src/Drivers/crp.o ./src/Drivers/systick.o  ./src/Aplicacion/BB8.o   
 Memory region         Used Size  Region Size  %age Used
-       MFlash512:        2172 B       512 KB      0.41%
+       MFlash512:        2192 B       512 KB      0.42%
         RamLoc32:           8 B        32 KB      0.02%
         RamAHB32:          0 GB        32 KB      0.00%
 Finished building target: BB8.axf
@@ -18,8 +18,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "BB8.axf"; # arm-none-eabi-objcopy -v -O binary "BB8.axf" "BB8.bin" ; # checksum -p LPC1769 -d "BB8.bin";
    text	   data	    bss	    dec	    hex	filename
-   2164	      8	      0	   2172	    87c	BB8.axf
+   2184	      8	      0	   2192	    890	BB8.axf
  
-15:21:00 **** Incremental Build of configuration Debug for project BB8 ****
+17:32:57 **** Incremental Build of configuration Debug for project BB8 ****
 make -r all 
 make: No se hace nada para 'all'.

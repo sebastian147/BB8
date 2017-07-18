@@ -1,6 +1,6 @@
-15:21:00 **** Incremental Build of configuration Debug for project BB8 ****
+17:32:57 **** Incremental Build of configuration Debug for project BB8 ****
 make -r all 
 make: No se hace nada para 'all'.
 
-15:21:00 Build Finished (took 63ms)
+17:32:57 Build Finished (took 69ms)
 

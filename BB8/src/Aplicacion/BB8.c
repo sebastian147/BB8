@@ -26,6 +26,7 @@ int main(void) {
 
 
 	while(salida) {
+
 	}
     return 0 ;
 }
