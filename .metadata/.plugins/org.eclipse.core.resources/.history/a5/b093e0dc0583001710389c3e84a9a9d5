@@ -1,0 +1,15 @@
+#include "DR_Motores.h"
+
+void		ApagarMotores		( void )
+{
+	SetPIN( MOTOR1 , OFF );
+	SetPIN( MOTOR2 , OFF );
+}
+void		LiberarMotores		( void )
+{
+
+}
+void		MoverMotores		( void )
+{
+
+}

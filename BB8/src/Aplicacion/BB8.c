@@ -17,16 +17,18 @@
 
 #include "aplicacion.h"
 
-int main(void) {
-
-	uint8_t salida=1;
+int		main		( void )
+{
+	uint8_t salida = 1, accion = 0;
 
 	Kit_Init();
-	rgb_init();
 
 
-	while(salida) {
-
+	while( salida )
+	{
+		//accion=RecibirInformacion();
+		ActualizarMotores(accion);
+		//Estabilizar(); //creo que estaria mejor en el systick
 	}
     return 0 ;
 }

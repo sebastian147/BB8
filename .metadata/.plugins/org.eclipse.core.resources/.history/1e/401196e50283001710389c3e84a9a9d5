@@ -1,0 +1,17 @@
+/*
+ * Info2_CortexM3pwm.h
+ *
+ *  Created on: 27/02/2012
+ *      Author: Pablo
+ */
+
+#ifndef INFO2_CORTEXM3PWM_H_
+#define INFO2_CORTEXM3PWM_H_
+
+
+
+void 		Init_Pwm			( void );
+
+
+
+#endif /* INFO2_CORTEXM3PWM_H_ */

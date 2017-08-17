@@ -15,6 +15,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src/Aplicacion \
-src/Drivers \
-src/Primitivas \
+src/Drivers/Kit \
+src/Drivers/Motores/DR_Motores.c \
+src/Primitivas/Motores \
 

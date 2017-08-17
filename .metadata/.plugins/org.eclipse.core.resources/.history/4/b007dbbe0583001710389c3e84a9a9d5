@@ -1,0 +1,14 @@
+#include "DR_Motores.h"
+
+void		ApagarMotores		( void )
+{
+
+}
+void		LiberarMotores		( void )
+{
+
+}
+void		MoverMotores		( void )
+{
+
+}

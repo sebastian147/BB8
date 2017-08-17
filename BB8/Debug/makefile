@@ -8,8 +8,9 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/Primitivas/subdir.mk
--include src/Drivers/subdir.mk
+-include src/Primitivas/Motores/subdir.mk
+-include src/Drivers/Motores/DR_Motores.c/subdir.mk
+-include src/Drivers/Kit/subdir.mk
 -include src/Aplicacion/subdir.mk
 -include subdir.mk
 -include objects.mk

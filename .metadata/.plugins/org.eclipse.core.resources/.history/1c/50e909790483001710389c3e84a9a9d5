@@ -1,0 +1,168 @@
+/**
+ 	\file FW_KitInit.c
+ 	\brief Drivers de inicializacion del kit base
+ 	\details Llamar a Kit_Init() para inicializar el kit
+ 	\author Pablo Irrera Condines
+ 	\date 2015.04.30
+*/
+
+#include "KitInfo2.h"
+#include "DR_KitInit.h"
+#include "DR_Init_Motores.h"
+
+/********************************************************************************
+	\fn  void Kit_Init(void)
+	\brief: Inicializacion del kit base
+	\details: Configura el oscilador interno e inicializa los pines de ebtradas/salidas
+	\author: Pablo Irrera Condines
+ 	\param 	void
+	\return void
+*/
+void 		Kit_Init			( void )
+{
+	//Inicalizo el oscilador interno del micro en 100MHz
+	PLL_Init();
+	//Configuro los puertos de entrada/salida de proposito general (GPIOs), como entrada o salida
+	Kit_BaseInit();
+	//inicio el systick
+	InicSysTick();
+	//inicio todo lo relacionado con motores
+	Init_Motores();
+
+}
+
+/********************************************************************************
+	\fn  void PLL_Init(void)
+	\brief: Inicializacion del PLL
+	\details: Habilita el oscilador externo como fuente de clock y configura el PLL0
+			para generar un clock interno de 100MHz.
+			SE RECOMIENDA NO MODIFICAR PARA SU USO EN EL KIT DE INFO2
+	\author: Pablo Irrera Condines
+ 	\param 	void
+	\return void
+*/
+void 		PLL_Init			( void )
+{
+	SCS = 0x00000020;
+
+	if (SCS & (1 << 5))               /* If Main Oscillator is enabled      */
+		while ((SCS & (1<<6)) == 0);/* Wait for Oscillator to be ready    */
+
+	CCLKCFG = 0x00000003;      /* Setup Clock Divider                */
+
+	PCLKSEL0 = 0x00000000;     /* Peripheral Clock Selection         */
+	PCLKSEL1 = 0x00000000;
+
+	CLKSRCSEL = 0x00000001;    /* Select Clock Source for PLL0       */
+
+	PLL0CFG = 0x00050063;      /* configure PLL0                     */
+	PLL0FEED = 0xAA;
+	PLL0FEED = 0x55;
+
+	PLL0CON = 0x01;             /* PLL0 Enable                        */
+	PLL0FEED = 0xAA;
+	PLL0FEED = 0x55;
+
+	while (!(PLL0STAT & (1<<26)));/* Wait for PLOCK0                    */
+
+	PLL0CON = 0x03;             /* PLL0 Enable & Connect              */
+	PLL0FEED = 0xAA;
+	PLL0FEED = 0x55;
+
+	while (!(PLL0STAT & ((1<<25) | (1<<24))));/* Wait for PLLC0_STAT & PLLE0_STAT */
+
+	PLL1CFG = 0x00000023;
+	PLL1FEED = 0xAA;
+	PLL1FEED = 0x55;
+
+	PLL1CON = 0x01;             /* PLL1 Enable                        */
+	PLL1FEED = 0xAA;
+	PLL1FEED = 0x55;
+
+	while (!(PLL1STAT & (1<<10)));/* Wait for PLOCK1                    */
+
+	PLL1CON = 0x03;             /* PLL1 Enable & Connect              */
+	PLL1FEED = 0xAA;
+	PLL1FEED = 0x55;
+
+	while (!(PLL1STAT & ((1<< 9) | (1<< 8))));/* Wait for PLLC1_STAT & PLLE1_STAT */
+
+	PCONP = 0x042887DE;        /* Power Control for Peripherals      */
+
+	CLKOUTCFG = 0x00000000;    /* Clock Output Configuration         */
+
+	FLASHCFG  = (FLASHCFG & ~0x0000F000) | 0x00004000;
+}
+
+/********************************************************************************
+	\fn  void Kit_BaseInit(void)
+	\brief: Inicializa los pines del microcontrolador conectados a entradas/salidas
+	\author: Pablo Irrera Condines
+ 	\param 	void
+	\return void
+*/
+void 		Kit_BaseInit		( void )
+{
+	//Leds
+	SetPINSEL( PORT2 , 0 , PINSEL_GPIO );		//LED1
+	SetPINSEL( PORT0 , 23 , PINSEL_GPIO );	//LED2
+	SetPINSEL( PORT0 , 21 , PINSEL_GPIO );	//LED3
+	SetPINSEL( PORT0 , 27 , PINSEL_GPIO );	//LED4
+	SetPINSEL( PORT2 , 1 , PINSEL_GPIO );		//RGBR
+	SetPINSEL( PORT2 , 2 , PINSEL_GPIO );		//RGBG
+	SetPINSEL( PORT2 , 3 , PINSEL_GPIO );		//RGBB
+	//Buzzer:
+	SetPINSEL( PORT0 ,28 ,PINSEL_GPIO );
+	//Teclas (teclado 4x1)
+	SetPINSEL( PORT2 , 10 , PINSEL_GPIO );	//KEY0
+	SetPINSEL( PORT0 , 18 , PINSEL_GPIO );	//KEY1
+	SetPINSEL( PORT0 , 11 , PINSEL_GPIO );	//KEY2
+	SetPINSEL( PORT2 , 13 , PINSEL_GPIO );	//KEY3
+	//PulsadorRC:
+	SetPINSEL( PORT1 , 26 , PINSEL_GPIO );
+	//Entradas digitales:
+	SetPINSEL( PORT4 , 29 , PINSEL_GPIO );	//IN0
+	SetPINSEL( PORT2 , 11 , PINSEL_GPIO );	//IN1
+
+//SALIDAS:
+	//Leds (Reles)
+	SetDIR( LED1 , GPIO_OUTPUT );
+	SetDIR( LED2 , GPIO_OUTPUT );
+	SetDIR( LED3 , GPIO_OUTPUT );
+	SetDIR( LED4 , GPIO_OUTPUT );
+	//Led RGB:
+	SetDIR( RGBR , GPIO_OUTPUT );
+	SetDIR( RGBG , GPIO_OUTPUT );
+	SetDIR( RGBB , GPIO_OUTPUT );
+	//Buzzer:
+	SetDIR( BUZZ , GPIO_OUTPUT );
+//ENTRADAS 	//teclas
+	SetDIR( KEY0 , GPIO_INPUT );
+	SetDIR( KEY1 , GPIO_INPUT );
+	SetDIR( KEY2 , GPIO_INPUT );
+	SetDIR( KEY3 , GPIO_INPUT );
+	//PulsadorRC:
+	SetDIR( KEY_RC , GPIO_INPUT );
+	//Entradas digitales:
+	SetDIR( IN0 , GPIO_INPUT );
+	SetDIR( IN1 , GPIO_INPUT );
+
+	//Empiezo el programa con los LEDs y el buzzer apagados
+	SetPIN( LED1 , OFF );
+	SetPIN( LED2 , OFF );
+	SetPIN( LED3 , OFF );
+	SetPIN( LED4 , OFF );
+	SetPIN( BUZZ , BUZZ_OFF );
+}
+
+void InicSysTick(void)
+{ //si divido x 4, interrumpe cada 2,5ms
+		STRELOAD  = ( STCALIB / 4 ) - 1 ;   //N=1 para 10ms
+		STCURR = 0;
+
+		ENABLE = 1;
+		TICKINT = 1;
+		CLKSOURCE = 1;
+		return;
+}
+
