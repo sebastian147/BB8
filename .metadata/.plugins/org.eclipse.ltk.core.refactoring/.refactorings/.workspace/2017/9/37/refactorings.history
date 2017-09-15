@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;BB8/inc/Drivers/Motores/DR_Init_Pwm&apos;" deleteContents="false" description="Delete resource &apos;BB8/inc/Drivers/Motores/DR_Init_Pwm&apos;" element1="/BB8/inc/Drivers/Motores/DR_Init_Pwm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1505077805466"/>&#x0A;<refactoring comment="Delete resource &apos;BB8/src/Drivers/Motores/DR_PWM/DR_PWM.c &apos;" deleteContents="false" description="Delete resource &apos;BB8/src/Drivers/Motores/DR_PWM/DR_PWM.c &apos;" element1="/BB8/src/Drivers/Motores/DR_PWM/DR_PWM.c " flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1505078081721"/>
-</session>
