@@ -1,0 +1,7 @@
+#include "KitInfo2.h"
+#include "DR_Motores.h"
+
+
+
+void		ActualizarMotores	( uint8_t Accion );
+

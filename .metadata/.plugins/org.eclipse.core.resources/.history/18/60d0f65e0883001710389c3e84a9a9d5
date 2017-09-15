@@ -1,3 +1,0 @@
-void		ApagarMotores		( void );
-void		LiberarMotores		( void );
-void		MoverMotores		( void );

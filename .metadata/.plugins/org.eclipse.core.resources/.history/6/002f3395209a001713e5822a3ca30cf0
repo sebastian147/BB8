@@ -1,0 +1,121 @@
+#include "PR_ManejoMotores.h"
+
+
+extern uint8_t G_porcentaje1;
+extern uint8_t G_porcentaje2;
+
+
+void		ActualizarMotores	( uint8_t Accion )
+{
+
+	static uint32_t count = 500;
+	static uint8_t	mitad = 0;
+
+	if( count != 0)
+	{
+		count--;
+		if( count == 0 )
+		{
+			switch( G_Motor )
+			{
+				case FRENAR:
+						break;
+				case MOVERADELANTE:
+						Actualizar_Pwm();
+						G_porcentaje1++;
+						G_porcentaje2++;
+						break;
+				case MOVERATRAS:
+						G_porcentaje1--;
+						G_porcentaje2--;
+						break;
+				case MOVERIZQUIERDA:
+						G_porcentaje1++;
+						G_porcentaje2--;
+						break;
+				case MOVERDERECHA:
+						G_porcentaje1--;
+						G_porcentaje2++;
+						break;
+				case GIRARADELANTEDERECHA:
+						G_porcentaje1++;
+						if( mitad == 1)
+						{
+							G_porcentaje2++;
+						}
+						mitad++;
+						mitad %= 1;
+						break;
+				case GIRARADELANTEIZQUIERDA:
+						G_porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
+						if( mitad == 1)
+						{
+							G_porcentaje1++;
+						}
+						G_porcentaje2++;
+						mitad++;
+						mitad %= 1;
+						break;
+				case GIRARATRASDERECHA:
+						G_porcentaje1--; //liberarlo, despues ver bien como lo hago
+						if( mitad == 1)
+						{
+							G_porcentaje2--;
+						}
+						mitad++;
+						mitad %= 1;
+						break;
+				case GIRARATRASIZQUIERDA:
+						if( mitad == 1)
+						{
+							G_porcentaje1--;
+						}
+						G_porcentaje2--;
+						mitad++;
+						mitad %= 1;
+						break;
+
+
+
+
+
+		   //   while (det == 'S')   // S, stop
+		     //  {md.setSpeeds(0,0);det = check();}
+				/*case FRENAR:
+
+					    break;
+				case MOVERADELANTE:
+						G_porcentaje1++;
+						G_porcentaje2 = 0; //liberarlo, despues ver bien como lo hago
+						break;
+				case MOVERATRAS:
+						G_porcentaje1--;
+						G_porcentaje2 = 0; //liberarlo, despues ver bien como lo hago
+						break;
+				case MOVERIZQUIERDA:
+						G_porcentaje1++;
+						G_porcentaje2--;
+						break;
+				case MOVERDERECHA:
+						G_porcentaje1++;
+						G_porcentaje2++;
+						break;
+				case GIRARDERECHA:
+						G_porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
+						G_porcentaje2++;
+						break;
+				case GIRARIZQUIERDA:
+						G_porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
+						G_porcentaje2--;
+						break;
+		      } break;</p><p>    case 'H': { //backward left
+		        motor1.run(BACKWARD);
+		        motor2.run(BACKWARD);
+		      } break;</p><p>    case 'J': { //backward right
+		        motor1.run(BACKWARD);
+		        motor2.run(FORWARD);*/
+			}
+		}
+	}
+
+}

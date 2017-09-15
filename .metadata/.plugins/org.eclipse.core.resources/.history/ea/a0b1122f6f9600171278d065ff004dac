@@ -1,0 +1,20 @@
+/*
+ * DR_Init_Pwm.c
+
+ *
+ *  Created on: 10 de set. de 2017
+ *      Author: seba-pc
+ */
+
+#include "RegsLPC17xx.h"
+#include "KitInfo2.h"
+
+
+
+#define 	RGB_MAX				255		//maximo valor que puede tomar un color
+#define	 	PWM_FREC			1000
+#define 	PWM_PRESCALE_NS		(1000000000/(PWM_FREC*RGB_MAX));
+
+
+
+void		Init_Pwm		( void );

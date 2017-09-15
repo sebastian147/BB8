@@ -1,0 +1,24 @@
+#include "DR_Init_Motores.h"
+#include "DR_Init_Pwm.h"
+
+uint8_t duty_prendido = 0;
+
+void		Init_Motores		( void )
+{
+	SetPINSEL( MOTOR1 , PINSEL_GPIO );
+	SetPINSEL( MOTOR2 , PINSEL_GPIO );
+
+
+	SetDIR( MOTOR1 , GPIO_OUTPUT );
+	SetDIR( MOTOR2 , GPIO_OUTPUT );
+
+	SetPIN( MOTOR1 , OFF );
+	SetPIN( MOTOR2 , OFF );
+
+
+}
+void		Init_MotoresAll		( void )
+{
+	Init_Motores();
+	Init_Pwm();
+}

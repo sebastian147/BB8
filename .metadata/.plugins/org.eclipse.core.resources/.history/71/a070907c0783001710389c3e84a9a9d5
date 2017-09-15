@@ -1,6 +1,0 @@
-#include "PR_ManejoMotores.h"
-
-void		ActualizarMotores	( void )
-{
-
-}

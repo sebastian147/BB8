@@ -1,0 +1,6 @@
+#include "RegsLPC17xx.h"
+#include "KitInfo2.h"
+
+
+
+void		Actualizar_Pwm		( void );

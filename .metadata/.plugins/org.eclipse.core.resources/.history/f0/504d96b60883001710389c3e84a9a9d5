@@ -1,2 +1,0 @@
-void		ActualizarMotores	( uint8_t Accion );
-

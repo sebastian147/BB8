@@ -1,0 +1,16 @@
+/*
+ * DR_PWM.c
+ *
+ *  Created on: 10 de set. de 2017
+ *      Author: seba-pc
+ */
+#include "DR_PWM.h"
+extern uint8_t duty_motor1;
+extern uint8_t duty_motor2;
+void		Actualizar_Pwm		( void )
+{
+	PWM1MR2 = duty_motor1;
+	//PWM1MR3 = duty_motor2;
+
+	PWM1LER = 0x1C;		//habilito latch de match 2, 3 y 4
+}

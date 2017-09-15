@@ -1,0 +1,80 @@
+/*
+===============================================================================
+ Name        : PWM.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+#ifdef __USE_CMSIS
+#include "LPC17xx.h"
+#endif
+
+#include <cr_section_macros.h>
+
+// TODO: insert other include files here
+
+// TODO: insert other definitions and declarations here
+
+#include "KitInfo2_RGB.h"
+#include "Ejemplo_RGB.h"
+#include "PR_teclado.h"
+#include "DR_teclado.h"
+#include "FW_Systick.h"
+
+volatile uint32_t msTicks = 5;
+extern uint8_t g_flag;
+
+int main(void)
+{
+	//uint32_t secuencia = 1, cuenta = DELAY_ENTRE_SEC;
+	uint8_t rojo = 0,verde = 0,azul = 100, tecla = 4;
+
+	uint8_t intensidad = 255;//lo puedo modificar yo
+
+	Systick_Init( 1000 );
+
+	LedRGB_Color(ROJO, rojo);
+	//LedRGB_Color(VERDE, verde);
+	LedRGB_Color(AZUL, azul);
+	init_teclado();
+	Inic_LedRGB();
+
+	while(1)
+	{
+		tecla = PR_teclado();
+		if(g_flag == 0)
+		{
+			g_flag = 1;
+			switch(tecla)
+			{
+			case 0:
+				if( azul <= intensidad )
+					azul++;
+				//verde++;
+				LedRGB_Color(AZUL, azul);
+				break;
+			case 1:
+				if( rojo <= intensidad )
+					rojo++;
+				//verde++;
+				LedRGB_Color(ROJO, rojo);
+				break;
+			case 4:
+
+				if( azul >100)
+				{
+					azul--;
+				}
+				if( rojo > 0)
+					rojo--;
+				LedRGB_Color(AZUL, azul);
+				LedRGB_Color(ROJO, rojo);
+				break;
+			}
+		}
+	}
+	return 0 ;
+}

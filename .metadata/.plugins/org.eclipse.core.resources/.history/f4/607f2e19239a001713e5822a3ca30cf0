@@ -1,0 +1,10 @@
+#include "PR_ManejoMotores.h"
+
+extern uint8_t G_accion;
+
+void		ActualizarMotores	( uint8_t Accion )
+{
+
+	static uint8_t	mitad = 0;
+	G_accion = Accion;
+}

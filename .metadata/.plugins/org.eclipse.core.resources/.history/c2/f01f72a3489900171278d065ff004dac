@@ -1,0 +1,14 @@
+#define		FRENAR						0
+#define		MOVERADELANTE				1
+#define		MOVERATRAS					2
+#define		MOVERIZQUIERDA				3
+#define		MOVERDERECHA				4
+#define		GIRARADELANTEDERECHA		5
+#define		GIRARADELANTEIZQUIERDA		6
+#define		GIRARATRASDERECHA			7
+#define		GIRARATRASIZQUIERDA			8
+
+
+void		ApagarMotores		( void );
+void		LiberarMotores		( void );
+void		MoverMotores		( void );

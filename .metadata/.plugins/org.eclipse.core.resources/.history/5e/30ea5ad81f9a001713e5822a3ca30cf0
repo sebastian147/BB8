@@ -1,0 +1,27 @@
+/*
+ * Info2_CortexM3pwm.h
+ *
+ *  Created on: 27/02/2012
+ *      Author: Pablo
+ */
+
+#ifndef DR_INIT_MOTORES_H_
+#define DR_INIT_MOTORES_H_
+
+
+
+#include "RegsLPC17xx.h"
+#include "KitInfo2.h"
+
+
+
+#define 	MOTOR1				1,1//revisar si estos pines estan bien
+#define		MOTOR2				1,2//revisar si estos pines estan bien
+
+
+
+
+
+
+
+#endif /* DR_INIT_MOTORES_H_ */

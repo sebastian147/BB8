@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;BB8/inc/Drivers/Motores/DR_Init_Pwm.c&apos; to &apos;DR_Init_Pwm.h&apos;" description="Rename resource &apos;DR_Init_Pwm.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/Drivers/Motores/DR_Init_Pwm.c" name="DR_Init_Pwm.h" stamp="1505078058761" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;BB8/inc/Drivers/Motores/DR_PWM&apos; to &apos;DR_PWM.h&apos;" description="Rename resource &apos;DR_PWM&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/Drivers/Motores/DR_PWM" name="DR_PWM.h" stamp="1505078801500" updateReferences="true"/>
+</session>

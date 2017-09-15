@@ -8,3 +8,5 @@
 1502940780383	Delete resource 'BB8/inc/Primitivas/Motores/Motores.h'
 1502940856772	Delete resource 'BB8/src/Drivers/FW_rgb.c'
 1502943010020	Delete 2 resources
+1502995048189	Delete resource 'PWM_RGB'
+1502995131479	Delete resource 'PWM/src/PWM.c'
