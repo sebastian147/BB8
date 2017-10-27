@@ -4,6 +4,7 @@
 #include "KitInfo2.h"
 #include "PR_ManejoMotores.h"
 #include "DR_KitInit.h"
+#include "PR_Bluetooth.h"
 
 #endif
 

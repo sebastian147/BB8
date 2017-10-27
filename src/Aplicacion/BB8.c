@@ -26,9 +26,10 @@ int		main		( void )
 
 	while( salida )
 	{
-		//accion=RecibirInformacion();
+		accion = RecibirInformacion();
 		ActualizarMotores(accion);
 		//Estabilizar(); //creo que estaria mejor en el systick
+
 	}
     return 0 ;
 }
