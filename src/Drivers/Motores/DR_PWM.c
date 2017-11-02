@@ -22,7 +22,7 @@ void		Init_Pwm		( void )
 
 	PINSEL4 |= 1<<2;	FIO2DIR |= 1<<1;//lo pongo como funcion 1 y salida
 	PINSEL4 |= 1<<4;	FIO2DIR |= 1<<2;//lo pongo como funcion 1 y salida
-	//PINSEL4 |= 1<<6;	FIO2DIR |= 1<<3;//lo pongo como funcion 1 y salida
+	PINSEL4 |= 1<<6;	FIO2DIR |= 1<<3;//lo pongo como funcion 1 y salida//este es para los servos
 
 	PWM1IR = 0x0000073F;//configuro interrupcionese
 	PWM1TCR = 0x00;
@@ -43,13 +43,13 @@ void		Init_Pwm		( void )
 	PWM1MR0 = MOTOR_MAX;		//establece el periodo del PWM
 	PWM1MR2 = 0;
 	PWM1MR4 = 0;
-//	PWM1MR3 = duty_rojo;
+	PWM1MR3 = 0;
 
 	PWM1LER = 0x1D;//sirve para actualizar el registro de cada match seteado en 1
 
 	PWM1PCR |= 1<<10;	//habilito salida PWM2
 	PWM1PCR |= 1<<11;	//habilito salida PWM3
-	//PWM1PCR |= 1<<12;	//habilito salida PWM4
+	PWM1PCR |= 1<<12;	//habilito salida PWM4
 
 	PWM1TCR |=	1<<1;		//se resetea el contador
 	PWM1TCR = 0x09;			//se habilitan contador y PWM

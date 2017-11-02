@@ -4,13 +4,16 @@
 uint8_t RecibirInformacion (void)
 {
 	uint8_t dato;
-	Serial_PopRx(&dato);
-	if(dato == 1)//todos los valores posibles de las opciones
+	if(Serial_PopRx(&dato)==1)
 	{
-		return 1;
+		return 255;
+	}
+	if(dato <= 11 )//todos los valores posibles de las opciones
+	{
+		return dato;
 	}
 	else
 	{
-		return 0;//no hacer nada
+		return 255;//no hacer nada
 	}
 }

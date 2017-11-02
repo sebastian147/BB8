@@ -1,4 +1,4 @@
-#include "DR_Motores.h"
+#include <DR_Motores_Continua.h>
 #include "DR_PWM.h"
 
 uint8_t G_accion = 0;

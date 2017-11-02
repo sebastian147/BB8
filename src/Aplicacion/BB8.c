@@ -28,7 +28,8 @@ int		main		( void )
 	{
 		accion = RecibirInformacion();
 		ActualizarMotores(accion);
-		//Estabilizar(); //creo que estaria mejor en el systick
+		Mover_Servo(accion);
+		//sonido(); //creo que estaria mejor en el systick
 
 	}
     return 0 ;

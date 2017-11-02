@@ -6,9 +6,9 @@
  	\date 2015.04.30
 */
 
+#include <DR_Motores_Continua.h>
 #include "KitInfo2.h"
 #include "DR_KitInit.h"
-#include "DR_Motores.h"
 
 /********************************************************************************
 	\fn  void Kit_Init(void)
