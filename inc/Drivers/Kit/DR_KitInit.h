@@ -8,6 +8,9 @@
 #ifndef FW_KITINIT_H_
 #define FW_KITINIT_H_
 
+#include "DR_PWM.h"
+#include "DR_Timer.h"
+
 
 
 void 		Kit_Init			( void );

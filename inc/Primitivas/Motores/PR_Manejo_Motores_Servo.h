@@ -14,16 +14,6 @@
 
 
 
-#define NO_GIRAR 100
-#define TERMINO_DE_GIRAR 50
-#define GIRAR 0
-
-#define GIRAR_180	9
-#define GIRAR_90 	10
-#define GIRAR_0		11
-
-
-
 void	Mover_Servo	(uint8_t	Movimiento);
 
 

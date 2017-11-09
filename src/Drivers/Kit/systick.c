@@ -6,6 +6,7 @@ void SysTick_Handler(void)
 {
 
 	Actualizar_Motores();
+	 Girar();
 
 
 }

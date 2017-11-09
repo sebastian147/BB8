@@ -1,5 +1,6 @@
 #include "DR_GPIO.h"
 #include "PR_Bluetooth.h"
+#include "PR_UART.h"
 
 uint8_t RecibirInformacion (void)
 {

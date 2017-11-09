@@ -5,35 +5,58 @@
  *      Author: seba-pc
  */
 #include "DR_Motores_Servo.h"
-uint8_t duty=0;
+uint8_t G_flag_Servo=0;
+
 void Apagar_Servo(void)
 {
-	duty=0;
-	Girar();
+	T0MR0 = 0;
 }
 void Girar_A_0(void)
 {
 
-	duty=25;
-	Girar();
-
+	T0MR0 = 100000/2;
 
 }
 void Girar_A_90(void)
 {
-	duty=75;
-	Girar();
+	T0MR0 =	150000/2;
 }
 void Girar_A_180(void)
 {
-	duty=125;
-	Girar();
+	T0MR0 = 200000/2;
 }
 void Girar(void)
 {
+	static uint8_t flag=NO_GIRAR;
+	switch(G_flag_Servo)
+	{
+	case GIRAR_0:
+		Girar_A_0();
+		flag=GIRAR;
+		break;
+	case GIRAR_90:
+		Girar_A_90();
+		flag=GIRAR;
+		break;
+	case GIRAR_180:
+		Girar_A_180();
+		flag=GIRAR;
+		break;
+	case GIRANDO:
+			if(flag<=TERMINO_DE_GIRAR)
+			{
+				flag++;
+			}
+			else
+			{
+				flag=NO_GIRAR;
+				Apagar_Servo();
 
-		PWM1MR2=duty;
+			}
+			break;
+	default:
+		break;
+	}
 
-		PWM1LER = 0x1C;
 
 }

@@ -28,6 +28,8 @@ void 		Kit_Init			( void )
 	InicSysTick();
 	//inicio todo lo relacionado con motores
 	Init_MotoresAll();
+	//inicio timer
+	TIMER0_Init();
 
 }
 
