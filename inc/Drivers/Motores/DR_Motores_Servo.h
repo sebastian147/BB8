@@ -21,18 +21,20 @@ void Girar_A_0(void);
 void Girar_A_90(void);
 void Girar_A_180(void);
 void Girar(void);
+void Init_Servo_Motor(void);
+
 
 
 #define SERVO_MOTOR 2,3
 
 #define NO_GIRAR 100
-#define TERMINO_DE_GIRAR 50
+#define TERMINO_DE_GIRAR 100
 #define GIRAR 0
 
-#define GIRAR_180	9
-#define GIRAR_90 	10
-#define GIRAR_0		11
-#define GIRANDO		12
+#define GIRAR_180	57
+#define GIRAR_90 	58
+#define GIRAR_0		59
+#define GIRANDO		15
 
 
 

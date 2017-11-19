@@ -13,8 +13,13 @@
 #define		GIRARATRASDERECHA			7
 #define		GIRARATRASIZQUIERDA			8
 
-#define 	MOTOR1				1,1//revisar si estos pines estan bien
-#define		MOTOR2				1,2//revisar si estos pines estan bien
+//#define 	MOTOR1				1,1//revisar si estos pines estan bien
+//#define		MOTOR2				1,2//revisar si estos pines estan bien
+
+#define		MOTOR1A				2,4
+#define		MOTOR1B				2,5
+#define		MOTOR2A				2,6
+#define		MOTOR2B				2,7
 
 
 

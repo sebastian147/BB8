@@ -23,13 +23,17 @@ void 		Kit_Init			( void )
 	//Inicalizo el oscilador interno del micro en 100MHz
 	PLL_Init();
 	//Configuro los puertos de entrada/salida de proposito general (GPIOs), como entrada o salida
-	Kit_BaseInit();
+	//Kit_BaseInit();
 	//inicio el systick
 	InicSysTick();
 	//inicio todo lo relacionado con motores
 	Init_MotoresAll();
 	//inicio timer
 	TIMER0_Init();
+	//Inicio el bluetooth
+	init_bluetooth();
+	//inicio servo motores
+	Init_Servo_Motor();
 
 }
 

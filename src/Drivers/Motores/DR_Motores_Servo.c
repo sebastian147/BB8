@@ -11,10 +11,16 @@ void Apagar_Servo(void)
 {
 	T0MR0 = 0;
 }
+void Init_Servo_Motor(void)
+{
+	SetPINSEL(SERVO_MOTOR,PINSEL_GPIO);
+	SetDIR(SERVO_MOTOR,GPIO_OUTPUT);
+	SetPIN(SERVO_MOTOR,OFF);
+}
 void Girar_A_0(void)
 {
 
-	T0MR0 = 100000/2;
+	T0MR0 = 50000/2;
 
 }
 void Girar_A_90(void)
@@ -23,38 +29,48 @@ void Girar_A_90(void)
 }
 void Girar_A_180(void)
 {
-	T0MR0 = 200000/2;
+	T0MR0 = 250000/2;
 }
 void Girar(void)
 {
 	static uint8_t flag=NO_GIRAR;
-	switch(G_flag_Servo)
+	static uint32_t count=0;
+	if( (flag != GIRANDO))
+	{
+		flag=G_flag_Servo;
+		G_flag_Servo=NO_GIRAR;
+	}
+	switch(flag)
 	{
 	case GIRAR_0:
 		Girar_A_0();
-		flag=GIRAR;
+		flag=GIRANDO;
+		count=0;
 		break;
 	case GIRAR_90:
 		Girar_A_90();
-		flag=GIRAR;
+		flag=GIRANDO;
+		count=0;
 		break;
 	case GIRAR_180:
 		Girar_A_180();
-		flag=GIRAR;
+		flag=GIRANDO;
+		count=0;
 		break;
 	case GIRANDO:
-			if(flag<=TERMINO_DE_GIRAR)
+			if(count<=TERMINO_DE_GIRAR)
 			{
-				flag++;
+				count++;
 			}
 			else
 			{
 				flag=NO_GIRAR;
-				Apagar_Servo();
-
+				count=0;
 			}
 			break;
-	default:
+	case NO_GIRAR:
+		Apagar_Servo();
+
 		break;
 	}
 

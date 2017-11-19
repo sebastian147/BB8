@@ -5,24 +5,37 @@ uint8_t G_accion = 0;
 
 void		ApagarMotores		( void )
 {
-	SetPIN( MOTOR1 , OFF );
-	SetPIN( MOTOR2 , OFF );
+	SetPIN( MOTOR1A , ON );
+	SetPIN( MOTOR2A , ON );
+	SetPIN( MOTOR1B , ON );
+	SetPIN( MOTOR2B , ON );
 }
 void		LiberarMotores		( void )
 {
-
+	SetPIN( MOTOR1A , OFF );
+	SetPIN( MOTOR2A , OFF );
+	SetPIN( MOTOR1B , OFF );
+	SetPIN( MOTOR2B , OFF );
 }
 void		Init_Motores		( void )
 {
-	SetPINSEL( MOTOR1 , PINSEL_GPIO );
-	SetPINSEL( MOTOR2 , PINSEL_GPIO );
+
+	SetPINSEL( MOTOR1A , PINSEL_GPIO );
+	SetPINSEL( MOTOR2A , PINSEL_GPIO );
+	SetPINSEL( MOTOR1B , PINSEL_GPIO );
+	SetPINSEL( MOTOR2B , PINSEL_GPIO );
+
+	SetDIR( MOTOR1A , GPIO_OUTPUT );
+	SetDIR( MOTOR2A , GPIO_OUTPUT );
+	SetDIR( MOTOR1B , GPIO_OUTPUT );
+	SetDIR( MOTOR2B , GPIO_OUTPUT );
+
+	SetPIN( MOTOR1A , ON );
+	SetPIN( MOTOR2A , ON );
+	SetPIN( MOTOR1B , ON );
+	SetPIN( MOTOR2B , ON );
 
 
-	SetDIR( MOTOR1 , GPIO_OUTPUT );
-	SetDIR( MOTOR2 , GPIO_OUTPUT );
-
-	SetPIN( MOTOR1 , OFF );
-	SetPIN( MOTOR2 , OFF );
 
 
 }
@@ -38,18 +51,34 @@ void		Actualizar_Motores		( void )
 			case MOVERADELANTE:
 					porcentaje1++;
 					porcentaje2++;
+					SetPIN( MOTOR1A , ON );
+					SetPIN( MOTOR2A , ON );
+					SetPIN( MOTOR1B , OFF );
+					SetPIN( MOTOR2B , OFF );
 					break;
 			case MOVERATRAS:
-					porcentaje1--;
-					porcentaje2--;
+					porcentaje1++;
+					porcentaje2++;
+					SetPIN( MOTOR1A , OFF );
+					SetPIN( MOTOR2A , OFF );
+					SetPIN( MOTOR1B , ON );
+					SetPIN( MOTOR2B , ON );
 					break;
 			case MOVERIZQUIERDA:
 					porcentaje1++;
-					porcentaje2--;
+					porcentaje2++;
+					SetPIN( MOTOR1A , ON );
+					SetPIN( MOTOR2A , OFF );
+					SetPIN( MOTOR1B , OFF );
+					SetPIN( MOTOR2B , ON );
 					break;
 			case MOVERDERECHA:
-					porcentaje1--;
+					porcentaje1++;
 					porcentaje2++;
+					SetPIN( MOTOR1A , OFF );
+					SetPIN( MOTOR2A , ON );
+					SetPIN( MOTOR1B , ON );
+					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARADELANTEDERECHA:
 					porcentaje1++;
@@ -59,6 +88,10 @@ void		Actualizar_Motores		( void )
 					}
 					mitad++;
 					mitad %= 1;
+					SetPIN( MOTOR1A , ON );
+					SetPIN( MOTOR2A , ON );
+					SetPIN( MOTOR1B , OFF );
+					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARADELANTEIZQUIERDA:
 					porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
@@ -69,6 +102,10 @@ void		Actualizar_Motores		( void )
 					porcentaje2++;
 					mitad++;
 					mitad %= 1;
+					SetPIN( MOTOR1A , ON );
+					SetPIN( MOTOR2A , ON );
+					SetPIN( MOTOR1B , OFF );
+					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARATRASDERECHA:
 					porcentaje1--; //liberarlo, despues ver bien como lo hago
@@ -78,6 +115,10 @@ void		Actualizar_Motores		( void )
 					}
 					mitad++;
 					mitad %= 1;
+					SetPIN( MOTOR1A , OFF );
+					SetPIN( MOTOR2A , OFF );
+					SetPIN( MOTOR1B , ON );
+					SetPIN( MOTOR2B , ON );
 					break;
 			case GIRARATRASIZQUIERDA:
 					if( mitad == 1)
@@ -87,6 +128,10 @@ void		Actualizar_Motores		( void )
 					porcentaje2--;
 					mitad++;
 					mitad %= 1;
+					SetPIN( MOTOR1A , OFF );
+					SetPIN( MOTOR2A , OFF );
+					SetPIN( MOTOR1B , ON );
+					SetPIN( MOTOR2B , ON );
 					break;
 
 

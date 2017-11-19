@@ -27,6 +27,10 @@ int		main		( void )
 	while( salida )
 	{
 		accion = RecibirInformacion();
+		if(accion==57)
+		{
+			accion=57;
+		}
 		ActualizarMotores(accion);
 		Mover_Servo(accion);
 		//sonido(); //creo que estaria mejor en el systick

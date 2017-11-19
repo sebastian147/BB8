@@ -6,6 +6,7 @@
 #include "KitInfo2.h"
 #include "DR_KitInit.h"
 #include "PR_Bluetooth.h"
+#include "PR_UART.h"
 
 #endif
 
