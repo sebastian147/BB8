@@ -21,20 +21,16 @@ int		main		( void )
 {
 	uint8_t salida = 1, accion = 0;
 
-	Kit_Init();
+	BB8_Init();
 
 
 	while( salida )
 	{
+
 		accion = RecibirInformacion();
-		if(accion==57)
-		{
-			accion=57;
-		}
 		ActualizarMotores(accion);
 		Mover_Servo(accion);
-		//sonido(); //creo que estaria mejor en el systick
-
+		Play_Sound(accion);
 	}
     return 0 ;
 }

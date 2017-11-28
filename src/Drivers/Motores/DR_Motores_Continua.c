@@ -2,6 +2,7 @@
 #include "DR_PWM.h"
 
 uint8_t G_accion = 0;
+uint8_t G_motor_max=0;
 
 void		ApagarMotores		( void )
 {
@@ -21,6 +22,7 @@ void		Init_Motores		( void )
 {
 
 	SetPINSEL( MOTOR1A , PINSEL_GPIO );
+
 	SetPINSEL( MOTOR2A , PINSEL_GPIO );
 	SetPINSEL( MOTOR1B , PINSEL_GPIO );
 	SetPINSEL( MOTOR2B , PINSEL_GPIO );
@@ -30,10 +32,10 @@ void		Init_Motores		( void )
 	SetDIR( MOTOR1B , GPIO_OUTPUT );
 	SetDIR( MOTOR2B , GPIO_OUTPUT );
 
-	SetPIN( MOTOR1A , ON );
-	SetPIN( MOTOR2A , ON );
-	SetPIN( MOTOR1B , ON );
-	SetPIN( MOTOR2B , ON );
+	SetPIN( MOTOR1A , OFF );
+	SetPIN( MOTOR2A , OFF );
+	SetPIN( MOTOR1B , OFF );
+	SetPIN( MOTOR2B , OFF );
 
 
 
@@ -42,49 +44,90 @@ void		Init_Motores		( void )
 void		Actualizar_Motores		( void )
 {
 	static uint8_t	mitad = 0;
-	static uint8_t porcentaje1 = 0, porcentaje2 = 0;
+	static uint8_t porcentaje1 = 0, porcentaje2 = 0,flag=0;
+
 		switch( G_accion )
 		{
 			case FRENAR:
 					LiberarMotores();
+					porcentaje1=0;
+					porcentaje2=0;
+					flag=0;
 					break;
 			case MOVERADELANTE:
-					porcentaje1++;
-					porcentaje2++;
+				if( flag!=1 )
+				{
+					flag=1;
+					porcentaje1=100;
+					porcentaje2=100;
+				}
+			//		if(G_motor_max>=porcentaje1)
+				//		porcentaje1++;
+					if(G_motor_max<porcentaje1)
+					porcentaje1--;
+				//	if(G_motor_max>=porcentaje2)
+			//			porcentaje2++;
+					if(G_motor_max<porcentaje2)
+						porcentaje2--;
+
 					SetPIN( MOTOR1A , ON );
 					SetPIN( MOTOR2A , ON );
 					SetPIN( MOTOR1B , OFF );
 					SetPIN( MOTOR2B , OFF );
 					break;
 			case MOVERATRAS:
-					porcentaje1++;
-					porcentaje2++;
+					if(G_motor_max>=porcentaje1)
+						porcentaje1++;
+				//	if(G_motor_max<porcentaje1)
+			//			porcentaje1--;
+					if(G_motor_max>=porcentaje2)
+						porcentaje2++;
+			//		if(G_motor_max<porcentaje2)
+				//		porcentaje2--;
 					SetPIN( MOTOR1A , OFF );
 					SetPIN( MOTOR2A , OFF );
 					SetPIN( MOTOR1B , ON );
 					SetPIN( MOTOR2B , ON );
 					break;
 			case MOVERIZQUIERDA:
-					porcentaje1++;
-					porcentaje2++;
+					if(G_motor_max>=porcentaje1)
+						porcentaje1++;
+					if(G_motor_max<porcentaje1)
+						porcentaje1--;
+					if(G_motor_max>=porcentaje2)
+						porcentaje2++;
+					if(G_motor_max<porcentaje2)
+						porcentaje2--;
 					SetPIN( MOTOR1A , ON );
 					SetPIN( MOTOR2A , OFF );
 					SetPIN( MOTOR1B , OFF );
 					SetPIN( MOTOR2B , ON );
 					break;
 			case MOVERDERECHA:
-					porcentaje1++;
-					porcentaje2++;
+					if(G_motor_max>=porcentaje1)
+						porcentaje1++;
+				//	if(G_motor_max<porcentaje1)
+				//		porcentaje1--;
+					if(G_motor_max>=porcentaje2)
+						porcentaje2++;
+			//		if(G_motor_max<porcentaje2)
+				//		porcentaje2--;
 					SetPIN( MOTOR1A , OFF );
 					SetPIN( MOTOR2A , ON );
 					SetPIN( MOTOR1B , ON );
 					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARADELANTEDERECHA:
-					porcentaje1++;
+					if(G_motor_max>=porcentaje1)
+						porcentaje1++;
+				//	if(G_motor_max<porcentaje1)
+					//	porcentaje1--;
 					if( mitad == 1)
 					{
-						porcentaje2++;
+						if((G_motor_max/2)>=porcentaje2)
+							porcentaje2++;
+				//		if((G_motor_max/2)<porcentaje2)
+					//		porcentaje2--;
 					}
 					mitad++;
 					mitad %= 1;
@@ -94,24 +137,36 @@ void		Actualizar_Motores		( void )
 					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARADELANTEIZQUIERDA:
-					porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
+					//porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
 					if( mitad == 1)
 					{
-						porcentaje1++;
+						if((G_motor_max/2)>=porcentaje1)
+							porcentaje1++;
+				//		if((G_motor_max/2)<porcentaje1)
+					//		porcentaje1--;
 					}
-					porcentaje2++;
-					mitad++;
+					if(G_motor_max>=porcentaje2)
+						porcentaje2++;
+		//			if(G_motor_max<porcentaje2)
+			//			porcentaje2--;
 					mitad %= 1;
-					SetPIN( MOTOR1A , ON );
-					SetPIN( MOTOR2A , ON );
+					SetPIN( MOTOR1A , ON  );
+					SetPIN( MOTOR2A , ON  );
 					SetPIN( MOTOR1B , OFF );
 					SetPIN( MOTOR2B , OFF );
 					break;
 			case GIRARATRASDERECHA:
-					porcentaje1--; //liberarlo, despues ver bien como lo hago
-					if( mitad == 1)
+				if(G_motor_max>=porcentaje1)
+					porcentaje1++;
+//				if(G_motor_max<porcentaje1)
+	//				porcentaje1--;
+				if( mitad == 1)
 					{
-						porcentaje2--;
+
+						if((G_motor_max/2)>=porcentaje2)
+							porcentaje2++;
+					//	if((G_motor_max/2)<porcentaje2)
+						//	porcentaje2--;
 					}
 					mitad++;
 					mitad %= 1;
@@ -123,9 +178,15 @@ void		Actualizar_Motores		( void )
 			case GIRARATRASIZQUIERDA:
 					if( mitad == 1)
 					{
-						porcentaje1--;
+						if((G_motor_max/2)>=porcentaje1)
+							porcentaje1++;
+			//			if((G_motor_max/2)<porcentaje1)
+				//			porcentaje1--;
 					}
-					porcentaje2--;
+					if(G_motor_max>=porcentaje2)
+						porcentaje2++;
+	//				if(G_motor_max<porcentaje2)
+		//				porcentaje2--;
 					mitad++;
 					mitad %= 1;
 					SetPIN( MOTOR1A , OFF );
@@ -135,35 +196,8 @@ void		Actualizar_Motores		( void )
 					break;
 
 
-				/*case FRENAR:
+		}
 
-					    break;
-				case MOVERADELANTE:
-						G_porcentaje1++;
-						G_porcentaje2 = 0; //liberarlo, despues ver bien como lo hago
-						break;
-				case MOVERATRAS:
-						G_porcentaje1--;
-						G_porcentaje2 = 0; //liberarlo, despues ver bien como lo hago
-						break;
-				case MOVERIZQUIERDA:
-						G_porcentaje1++;
-						G_porcentaje2--;
-						break;
-				case MOVERDERECHA:
-						G_porcentaje1++;
-						G_porcentaje2++;
-						break;
-				case GIRARDERECHA:
-						G_porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
-						G_porcentaje2++;
-						break;
-				case GIRARIZQUIERDA:
-						G_porcentaje1 = 0; //liberarlo, despues ver bien como lo hago
-						G_porcentaje2--;
-						break;*/
-
-	}
 	Actualizar_Pwm(porcentaje1,porcentaje2);
 
 }

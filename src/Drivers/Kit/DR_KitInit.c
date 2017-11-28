@@ -18,7 +18,7 @@
  	\param 	void
 	\return void
 */
-void 		Kit_Init			( void )
+void 		BB8_Init			( void )
 {
 	//Inicalizo el oscilador interno del micro en 100MHz
 	PLL_Init();
@@ -34,6 +34,9 @@ void 		Kit_Init			( void )
 	init_bluetooth();
 	//inicio servo motores
 	Init_Servo_Motor();
+	//inicialiciacion dac
+	DAC_Init();
+
 
 }
 
@@ -163,7 +166,7 @@ void 		Kit_BaseInit		( void )
 
 void InicSysTick(void)
 { //si divido x 4, interrumpe cada 2,5ms
-		STRELOAD  = ( STCALIB / 4 ) - 1 ;   //N=1 para 10ms
+		STRELOAD  = 125*100-1;   //N=1 para 10ms
 		STCURR = 0;
 
 		ENABLE = 1;

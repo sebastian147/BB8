@@ -3,18 +3,16 @@
 
 
 
-#define		FRENAR						0
-#define		MOVERADELANTE				1
-#define		MOVERATRAS					2
-#define		MOVERIZQUIERDA				3
-#define		MOVERDERECHA				4
-#define		GIRARADELANTEDERECHA		5
-#define		GIRARADELANTEIZQUIERDA		6
-#define		GIRARATRASDERECHA			7
-#define		GIRARATRASIZQUIERDA			8
-
-//#define 	MOTOR1				1,1//revisar si estos pines estan bien
-//#define		MOTOR2				1,2//revisar si estos pines estan bien
+#define		FRENAR						101
+#define		MOVERADELANTE				102
+#define		MOVERATRAS					103
+#define		MOVERIZQUIERDA				104
+#define		MOVERDERECHA				105
+#define		GIRARADELANTEDERECHA		106
+#define		GIRARADELANTEIZQUIERDA		107
+#define		GIRARATRASDERECHA			108
+#define		GIRARATRASIZQUIERDA			109
+#define		CAMBIARPOTENCIA				113
 
 #define		MOTOR1A				2,4
 #define		MOTOR1B				2,5
