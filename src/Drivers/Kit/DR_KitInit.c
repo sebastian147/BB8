@@ -1,23 +1,8 @@
-/**
- 	\file FW_KitInit.c
- 	\brief Drivers de inicializacion del kit base
- 	\details Llamar a Kit_Init() para inicializar el kit
- 	\author Pablo Irrera Condines
- 	\date 2015.04.30
-*/
 
 #include <DR_Motores_Continua.h>
 #include "KitInfo2.h"
 #include "DR_KitInit.h"
 
-/********************************************************************************
-	\fn  void Kit_Init(void)
-	\brief: Inicializacion del kit base
-	\details: Configura el oscilador interno e inicializa los pines de ebtradas/salidas
-	\author: Pablo Irrera Condines
- 	\param 	void
-	\return void
-*/
 void 		BB8_Init			( void )
 {
 	//Inicalizo el oscilador interno del micro en 100MHz
@@ -40,16 +25,7 @@ void 		BB8_Init			( void )
 
 }
 
-/********************************************************************************
-	\fn  void PLL_Init(void)
-	\brief: Inicializacion del PLL
-	\details: Habilita el oscilador externo como fuente de clock y configura el PLL0
-			para generar un clock interno de 100MHz.
-			SE RECOMIENDA NO MODIFICAR PARA SU USO EN EL KIT DE INFO2
-	\author: Pablo Irrera Condines
- 	\param 	void
-	\return void
-*/
+
 void 		PLL_Init			( void )
 {
 	SCS = 0x00000020;

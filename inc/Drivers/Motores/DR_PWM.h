@@ -10,5 +10,5 @@
 
 
 
-void		Actualizar_Pwm		( uint8_t porcentaje1, uint8_t porcentaje2 );
+void		Actualizar_Pwm		( uint8_t porcentaje1, uint8_t porcentaje2, uint8_t porcentaje3 );
 void		Init_Pwm			( void );

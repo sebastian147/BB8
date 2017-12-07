@@ -1,10 +1,4 @@
-/*
- * PR_UART.h
 
- *
- *  Created on: 27 de set. de 2017
- *      Author: seba-pc
- */
 #ifndef PR_UART_H_
 #define PR_UART_H_
 

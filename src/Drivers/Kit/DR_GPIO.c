@@ -1,11 +1,3 @@
-/**
- 	\file FW_GPIO.c
- 	\brief Drivers de GPIO para LPC17xx
- 	\details
- 	\author Pablo Irrera Condines
- 	\date 2015.04.30
-*/
-
 #include "DR_GPIO.h"
 
 

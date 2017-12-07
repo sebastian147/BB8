@@ -18,6 +18,8 @@
 #define		MOTOR1B				2,5
 #define		MOTOR2A				2,6
 #define		MOTOR2B				2,7
+#define		MOTOR3A				2,0
+#define		MOTOR3B				0,11
 
 
 

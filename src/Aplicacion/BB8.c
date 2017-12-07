@@ -1,12 +1,4 @@
-/*
-===============================================================================
- Name        : BB8.c
- Author      : $(author)
- Version     :
- Copyright   : $(copyright)
- Description : main definition
-===============================================================================
-*/
+
 
 #ifdef __USE_CMSIS
 #include "LPC17xx.h"

@@ -25,10 +25,10 @@ void Init_Servo_Motor(void);
 
 
 
-#define SERVO_MOTOR 2,3
+#define SERVO_MOTOR 0,25
 
 #define NO_GIRAR 100
-#define TERMINO_DE_GIRAR 800
+#define TERMINO_DE_GIRAR 1200
 #define GIRAR 0
 
 #define GIRAR_180	110

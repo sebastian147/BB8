@@ -1,11 +1,3 @@
-/**
- 	\file FW_GPIO.h
- 	\brief Header de GPIO para LPC17xx
- 	\details
- 	\author Pablo Irrera Condines
- 	\date 2015.04.30
-*/
-
 #ifndef FW_GPIO_H_
 #define FW_GPIO_H_
 

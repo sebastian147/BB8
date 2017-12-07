@@ -1,9 +1,3 @@
-/*
- * PR_UART.c
- *
- *  Created on: 27 de set. de 2017
- *      Author: seba-pc
- */
 #include "PR_UART.h"
 #include <stdio.h>
 

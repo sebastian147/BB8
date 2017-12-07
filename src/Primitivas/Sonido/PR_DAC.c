@@ -10,6 +10,6 @@ void Play_Sound ( uint8_t Accion)
 	if( Accion == SOUND )
 	{
 		srand(g_SeedCount);
-		g_DACFlag = ((rand () % 5) + 1);
+		g_DACFlag = ((rand () % 10) + 1);
 	}
 }

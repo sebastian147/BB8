@@ -1,12 +1,3 @@
-/**
- 	\file KitInfo2.h
- 	\brief Header para el kit base
- 	\details Este archivo contiene definiciones utiles
- 			 para la base del kit de informatica II
- 	\author Pablo Irrera Condines
- 	\date 2015.04.30
-*/
-
 #ifndef KIT_INFO2_H_
 #define KIT_INFO2_H_
 

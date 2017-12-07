@@ -1,12 +1,4 @@
-/**
- 	\file RegsLPC17xx.h
- 	\brief Header para LPC17xx
- 	\details Este archivo contiene la definicion de
- 			 los registros del LPC17xx utilizados en
- 			 informatica II
- 	\author Pablo Irrera Condines
- 	\date 2015.04.30
-*/
+
 #ifndef REGSLPC17XX_H_
 #define REGSLPC17XX_H_
 

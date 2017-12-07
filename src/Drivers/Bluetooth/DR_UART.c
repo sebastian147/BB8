@@ -1,11 +1,3 @@
-/*
- * DR_UART.c
- *
- *  Created on: 17 de set. de 2017
- *      Author: seba-pc
- */
-
-
 #include "DR_UART.h"
 #include "DR_GPIO.h"
 #include "PR_UART.h"

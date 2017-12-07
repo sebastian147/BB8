@@ -1,9 +1,3 @@
-/*
- * UART.h
- *
- *  Created on: 17 de set. de 2017
- *      Author: seba-pc
- */
 #ifndef DR_UART_H_
 #define DR_UART_H_
 

@@ -11,14 +11,14 @@ void		ActualizarMotores	( uint8_t Accion )
 		G_accion = Accion;
 	}
 
-	if(Accion <= 100 || (Accion == 113  && flag!=1))
+	if(Accion <= 100 || Accion == 113  )
 	{
 		if(Accion==113 )
 		{
 			flag=1;
 		}
 
-		if(flag==1 && (Accion <=100))
+		if(flag==1 && (Accion <=100 && Accion !=0))
 		{
 			G_motor_max = Accion;
 			flag=0;
@@ -26,4 +26,9 @@ void		ActualizarMotores	( uint8_t Accion )
 
 
 	}
+	/*if(Accion <=100 && Accion !=0 && Accion !=33)
+	{
+		G_motor_max = Accion;
+
+	}*/
 }

@@ -1,9 +1,3 @@
-/*
- * DR_Motores_Servo.c
- *
- *  Created on: 2 de nov. de 2017
- *      Author: seba-pc
- */
 #include "DR_Motores_Servo.h"
 uint8_t G_flag_Servo=0;
 

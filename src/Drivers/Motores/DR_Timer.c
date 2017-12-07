@@ -1,10 +1,3 @@
-/*
- * FW_Timer.c
- *
- *  Created on: 15/08/2013
- *      Author: Pablo
- */
-
 #include "DR_Timer.h"
 
 void TIMER0_Init(void)
