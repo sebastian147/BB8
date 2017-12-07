@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>files/fondo estrella de la muerte.png</file>
+        <file>files/bb8.png</file>
+        <file>files/star-wars-backgrounds.png</file>
+        <file>files/cropped-puuerhquwef08qw1.jpg</file>
+        <file>files/1ventana de star wars.png</file>
+        <file>files/espada laser azul.png</file>
+        <file>files/espada laser roja.png</file>
+        <file>starwars2.png</file>
+        <file>sw2.png</file>
+    </qresource>
+</RCC>
